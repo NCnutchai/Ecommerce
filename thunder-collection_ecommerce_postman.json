@@ -71,7 +71,7 @@
                             "language": "json"
                         }
                     },
-                    "raw": "{\n  \"order_number\": \"000002\"\n}"
+                    "raw": "{\n  \"order_number\": \"000006\"\n}"
                 },
                 "auth": {
                     "type": "bearer",
@@ -111,7 +111,7 @@
                             "language": "json"
                         }
                     },
-                    "raw": "{\n  \"order_number\": \"000002\"\n}"
+                    "raw": "{\n  \"order_number\": \"000006\",\n    \"status\": \"Pending\",\n    \"shipping_address\": \"11/11\",\n    \"total\": \"120\",\n    \"total_discount\": \"0\",\n    \"is_cancelled\": true,\n    \"order_items\": [\n      {\n        \"product_code\": \"0001\",\n      \t\"quantity\": 2,\n      \t\"price\": 20\n      }\n    ]\n}"
                 },
                 "auth": {
                     "type": "bearer",
