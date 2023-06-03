@@ -1,0 +1,361 @@
+{
+    "info": {
+        "name": "ecommerce",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "0.0.0.0:8000/api/order/cancel",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "0.0.0.0:8000/api/order/cancel",
+                    "path": [
+                        "api",
+                        "order",
+                        "cancel"
+                    ],
+                    "host": [
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"order_number\": \"000002\"\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4OTU3MDEsInVzZXJuYW1lIjoibnV0Y2hhaSJ9.dyY4srynOrIPx4uiKzu8jJrpI94tYJ3Z3BomD_U9Ld8",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "0.0.0.0:8000/api/order/detail",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "0.0.0.0:8000/api/order/detail",
+                    "path": [
+                        "api",
+                        "order",
+                        "detail"
+                    ],
+                    "host": [
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"order_number\": \"000002\"\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4OTU3MDEsInVzZXJuYW1lIjoibnV0Y2hhaSJ9.dyY4srynOrIPx4uiKzu8jJrpI94tYJ3Z3BomD_U9Ld8",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "0.0.0.0:8000/api/order/create",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "0.0.0.0:8000/api/order/create",
+                    "path": [
+                        "api",
+                        "order",
+                        "create"
+                    ],
+                    "host": [
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"order_number\": \"000002\"\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4OTU3MDEsInVzZXJuYW1lIjoibnV0Y2hhaSJ9.dyY4srynOrIPx4uiKzu8jJrpI94tYJ3Z3BomD_U9Ld8",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "0.0.0.0:8000/api/product/create",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "0.0.0.0:8000/api/product/create",
+                    "path": [
+                        "api",
+                        "product",
+                        "create"
+                    ],
+                    "host": [
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"code\": \"0002\",\n  \"Name\": \"ดินสอ\",\n  \"Price\": 20\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4OTU3MDEsInVzZXJuYW1lIjoibnV0Y2hhaSJ9.dyY4srynOrIPx4uiKzu8jJrpI94tYJ3Z3BomD_U9Ld8",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "0.0.0.0:8000/api/product/list",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "0.0.0.0:8000/api/product/list",
+                    "path": [
+                        "api",
+                        "product",
+                        "list"
+                    ],
+                    "host": [
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "port": "8000"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4OTU3MDEsInVzZXJuYW1lIjoibnV0Y2hhaSJ9.dyY4srynOrIPx4uiKzu8jJrpI94tYJ3Z3BomD_U9Ld8",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "0.0.0.0:8000/api/product/detail",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "0.0.0.0:8000/api/product/detail",
+                    "path": [
+                        "api",
+                        "product",
+                        "detail"
+                    ],
+                    "host": [
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"code\": \"0001\"\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4OTU3MDEsInVzZXJuYW1lIjoibnV0Y2hhaSJ9.dyY4srynOrIPx4uiKzu8jJrpI94tYJ3Z3BomD_U9Ld8",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "0.0.0.0:8000/api/user/order-history",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "0.0.0.0:8000/api/user/order-history",
+                    "path": [
+                        "api",
+                        "user",
+                        "order-history"
+                    ],
+                    "host": [
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "port": "8000"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4OTU3MDEsInVzZXJuYW1lIjoibnV0Y2hhaSJ9.dyY4srynOrIPx4uiKzu8jJrpI94tYJ3Z3BomD_U9Ld8",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "0.0.0.0:8000/api/user/profile",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "0.0.0.0:8000/api/user/profile",
+                    "path": [
+                        "api",
+                        "user",
+                        "profile"
+                    ],
+                    "host": [
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "port": "8000"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4OTY4ODQsInVzZXJuYW1lIjoibnV0Y2hhaSJ9.z4bFa7DwtrzYoJxgrteL1xLSDV_f2X7mGGA4ZKmkLeE",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "0.0.0.0:8000/api/user/register",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "0.0.0.0:8000/api/user/register",
+                    "path": [
+                        "api",
+                        "user",
+                        "register"
+                    ],
+                    "host": [
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"username\": \"nutchai\",\n\t\"password\": \"admin\",\n\t\"firstname\": \"Nutchai\",\n\t\"lastname\": \"Chaiprasertsud\",\n\t\"phone_number\": \"0957121940\",\n\t\"email\": \"nutchai.new@gmail.com\"\n}"
+                }
+            }
+        },
+        {
+            "name": "0.0.0.0:8000/api/login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "0.0.0.0:8000/api/login",
+                    "path": [
+                        "api",
+                        "login"
+                    ],
+                    "host": [
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"username\": \"nutchai\",\n  \"password\": \"admin\"\n}"
+                }
+            }
+        }
+    ]
+}
