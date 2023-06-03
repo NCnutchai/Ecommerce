@@ -1,13 +1,14 @@
 package auth
 
 import (
+	"os"
 	"strings"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
 )
 
-const jwtSecret = "test-jwt-secret"
+var jwtSecret = os.Getenv("SECRET_KEY")
 
 func GenerateToken(username string) (string, error) {
 	token := jwt.New(jwt.SigningMethodHS256)

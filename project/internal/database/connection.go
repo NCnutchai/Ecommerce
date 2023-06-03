@@ -7,8 +7,6 @@ import (
 
 	"os"
 
-	"project/internal/configs"
-
 	_ "github.com/lib/pq"
 )
 
@@ -17,10 +15,6 @@ type PostgresDB struct {
 }
 
 func ConnectPostgres() (*PostgresDB, error) {
-	err := configs.LoadEnvVariables()
-	if err != nil {
-		log.Fatal(err)
-	}
 	host := os.Getenv("DB_HOST")
 	port := os.Getenv("DB_PORT")
 	user := os.Getenv("DB_USER")

@@ -1,9 +1,12 @@
 package main
 
 import (
+	"log"
+
 	"github.com/gin-gonic/gin"
 
 	"project/api"
+	"project/internal/configs"
 	"project/internal/database"
 	"project/internal/orders"
 	"project/internal/products"
@@ -11,6 +14,11 @@ import (
 )
 
 func main() {
+	err := configs.LoadEnvVariables()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	router := gin.Default()
 
 	db, err := database.ConnectPostgres()
