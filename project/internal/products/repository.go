@@ -6,6 +6,7 @@ type Repository interface {
 	FindAll() (*[]Product, error)
 	FindByCode(code string) (*Product, error)
 	Create(product Product) error
+	FindID(code string) (*int, error)
 }
 
 type productRepository struct {
@@ -59,4 +60,15 @@ func (r *productRepository) Create(product Product) error {
 		return err
 	}
 	return nil
+}
+
+func (r *productRepository) FindID(code string) (*int, error) {
+	var product Product
+	query := "SELECT id FROM products WHERE code = $1"
+	err := r.db.Conn.QueryRow(query, code).Scan(
+		&product.ID)
+	if err != nil {
+		return nil, err
+	}
+	return &product.ID, nil
 }

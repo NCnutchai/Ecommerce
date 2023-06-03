@@ -11,13 +11,19 @@ import (
 	"project/internal/orders"
 )
 
+type OrderItemRequest struct {
+	ProductCode string          `json:"product_code"`
+	Quantity    int             `json:"quantity"`
+	Price       decimal.Decimal `json:"price"`
+}
+
 type OrderCreateRequest struct {
-	OrderNumber     string          `json:"order_number" binding:"required"`
-	Status          string          `json:"status" binding:"required"`
-	ShippingAddress string          `json:"shipping_address"`
-	UserID          string          `json:"user_id"`
-	Total           decimal.Decimal `json:"total"`
-	TotalDiscount   decimal.Decimal `json:"total_discount"`
+	OrderNumber     string             `json:"order_number" binding:"required"`
+	Status          string             `json:"status" binding:"required"`
+	ShippingAddress string             `json:"shipping_address"`
+	Total           decimal.Decimal    `json:"total"`
+	TotalDiscount   decimal.Decimal    `json:"total_discount"`
+	OrderItems      []OrderItemRequest `json:"order_items"`
 }
 
 type CancelCreateRequest struct {
@@ -50,6 +56,21 @@ func (ah *APIHandler) CreateOrderHandler(c *gin.Context) {
 	order.IsCancelled = false
 	order.CreatedAt = time.Now().UTC()
 	order.UpdatedAt = time.Now().UTC()
+
+	for _, item := range req.OrderItems {
+		var order_item orders.OrderItem
+		product_id, err := ah.productService.FindProductID(item.ProductCode)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid product code"})
+			return
+		}
+		order_item = orders.OrderItem{
+			ProductID: *product_id,
+			Quantity:  item.Quantity,
+			Price:     item.Price,
+		}
+		*order.OrderItems = append(*order.OrderItems, order_item)
+	}
 
 	_, err := ah.orderService.CreateOrder(order)
 	if err != nil {

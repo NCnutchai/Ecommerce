@@ -4,6 +4,7 @@ type Service interface {
 	ProductList() (*[]Product, error)
 	ProductDetail(code string) (*Product, error)
 	ProductCreate(product Product) error
+	FindProductID(code string) (*int, error)
 }
 
 type productService struct {
@@ -26,4 +27,8 @@ func (s *productService) ProductDetail(code string) (*Product, error) {
 
 func (s *productService) ProductCreate(product Product) error {
 	return s.repo.Create(product)
+}
+
+func (s *productService) FindProductID(code string) (*int, error) {
+	return s.repo.FindID(code)
 }
