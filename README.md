@@ -13,4 +13,4 @@ Then, create environment file:
 ``` touch .env ```
 
 ### Run code
-To start your application: ``` go run cmd.main.go  ```
+To start your application: ``` go run cmd/main.go  ```
